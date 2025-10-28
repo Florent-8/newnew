@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To-Do List (TypeScript)</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 2rem;
+        background-color: #f9f9f9;
+      }
+
+      h1 {
+        text-align: center;
+        color: #333;
+      }
+
+      form {
+        display: flex;
+        justify-content: center;
+        gap: 0.5rem;
+        margin-bottom: 1rem;
+      }
+
+      input[type="text"] {
+        padding: 0.5rem;
+        font-size: 1rem;
+        width: 250px;
+      }
+
+      button {
+        padding: 0.5rem 1rem;
+        font-size: 1rem;
+        cursor: pointer;
+      }
+
+      #list {
+        list-style-type: none;
+        padding: 0;
+        max-width: 400px;
+        margin: 0 auto;
+      }
+
+      li {
+        background-color: #fff;
+        border: 1px solid #ddd;
+        padding: 0.75rem;
+        margin-bottom: 0.5rem;
+        border-radius: 4px;
+        display: flex;
+        align-items: center;
+      }
+   
+      label {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        width: 100%;
+      }
+
+      input[type="checkbox"] {
+        transform: scale(1.2);
+      }
+
+      span {
+        flex-grow: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>My To-Do List</h1>
+    <form id="new-task-form">
+      <input
+        type="text"
+        placeholder="Add a new task"
+        id="new-task-title"
+        aria-label="New task title"
+      />
+      <button type="submit">Add</button>
+    </form>
+    <ul id="list"></ul>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
